@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leave Request</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f4f7fe;
+    }
+    .header {
+      background-color: #4c1d95;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .left-section {
+      display: flex;
+      align-items: center;
+    }
+    .header img {
+      width: 40px;
+      margin-right: 10px;
+    }
+    .notification {
+      position: relative;
+    }
+    .notification .badge {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background-color: red;
+      color: white;
+      font-size: 10px;
+    }
+    .card {
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .status-wrapper {
+      position: relative;
+      padding-left: 30px;
+    }
+    .status-line-vertical {
+      position: absolute;
+      top: 5px;
+      left: 10px;
+      width: 2px;
+      height: 80px;
+      background-color: #d1d5db;
+    }
+    .dot {
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      margin-right: 10px;
+      z-index: 1;
+    }
+    .approved { background-color: green; }
+    .completed { background-color: blue; }
+    .form-label {
+      font-weight: 600;
+    }
+    .btn-primary {
+      background-color: #2563eb;
+      border: none;
+    }
+    .btn-secondary {
+      background-color: #6b7280;
+      border: none;
+    }
+    .breadcrumb {
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="left-section">
+      <img src="download1.jpg" alt="Logo">
+      <strong>M BHANU SANKAR</strong>
+    </div>
+    <div class="notification">
+      <span class="position-relative">
+        <i class="bi bi-bell fs-4"></i>
+        <span class="badge rounded-circle">3</span>
+      </span>
+    </div>
+  </div>
+
+  <div class="container mt-4">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">Home</li>
+        <li class="breadcrumb-item">Pages</li>
+        <li class="breadcrumb-item active" aria-current="page">Leave Request</li>
+      </ol>
+    </nav>
+
+    <div class="card p-4 mb-2">
+      <h5 class="fw-semibold mb-3">Request Status</h5>
+      <div class="status-wrapper">
+
+        <div class="d-flex align-items-center mb-1">
+            <span class="dot approved"></span>
+          <div>Principal - <span class="ms-1 fw-semibold text-success">Approved</span></div>
+        </div>
+        <div class="d-flex align-items-center mb-1">
+            <span class="dot approved"></span>
+          <div>Parent - <span class="ms-3 fw-semibold text-success">Approved</span></div>
+        </div>
+        <div class="d-flex align-items-center mb-3">
+
+            <span class="dot completed"></span>
+          <div>IVR Call - <span class="ms-1 fw-semibold text-primary">Completed</span></div>
+        </div>
+      </div>
+
+      <h5 class="mb-3 fw-semibold">Add New Request</h5>
+      <form>
+        <div class="mb-3">
+          <label for="fromDate" class="form-label">From Date</label>
+          <input type="date" class="form-control" id="fromDate" value="2025-07-26">
+        </div>
+        <div class="mb-3">
+          <label for="toDate" class="form-label">To Date</label>
+          <input type="date" class="form-control" id="toDate" value="2025-07-26">
+        </div>
+        <div class="mb-3">
+          <label for="fromTime" class="form-label">From Time</label>
+          <input type="time" class="form-control" id="fromTime" value="01:33">
+        </div>
+        <div class="mb-3">
+          <label for="toTime" class="form-label">To Time</label>
+          <input type="time" class="form-control" id="toTime" value="04:33">
+        </div>
+        <div class="mb-4">
+          <label for="reason" class="form-label">Reason</label>
+          <input type="text" class="form-control" id="reason" value="OUTING">
+        </div>
+        <div class="d-flex justify-content-between">
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="reset" class="btn btn-secondary">Refresh</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.js"></script>
+</body>
+</html>
